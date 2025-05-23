@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tic Tac Toe - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <h1>3D Tic Tac Toe</h1>
+            <div class="mode-selection">
+                <button id="two-player-btn" class="mode-btn">2 Players</button>
+                <button id="vs-computer-btn" class="mode-btn">VS Computer</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <h1>3D Tic Tac Toe</h1>
+            <div class="game-info">
+                <div class="game-status" id="status">Player X's Turn</div>
+                <div class="game-mode" id="mode-display"></div>
+            </div>
+            <div class="game-board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <div class="buttons">
+                <button id="reset-btn">Reset Game</button>
+                <button id="home-btn">Back to Home</button>
+            </div>
+            <div class="score">
+                <p>Player X: <span id="x-score">0</span></p>
+                <p>Player O: <span id="o-score">0</span></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
